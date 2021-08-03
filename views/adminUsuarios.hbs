@@ -1,0 +1,29 @@
+<div class="container-fluid  bg-dark" style="height : 100vh">
+    <div class="container">
+
+        <table class="table text-white">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Imagen</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+            {{#each usuarios}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{username}}</td>
+                <td>{{mail}}</td>
+                <td>{{telefono}}</td>      
+                <td><img src="/images/{{uuid}}" alt="no hay imagen" style="height : 50px"></td>
+               
+                <td><a href="/admin/usuarios/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                        Deshabilitar usuario</a></td>
+            </tr>
+            {{/each}}
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container-fluid  bg-dark" style="height : 100vh">
+    <div class="container">
+
+        <table class="table text-white">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Imagen</th>
+                <th>-</th>
+                <th>-</th>
+            </tr>
+            {{#each mascotas}}
+            <tr>
+  <td>{{id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{descripcion}}</td>
+            <td>{{imagen}}</td>
+               
+                <td><a href="/admin/mascotas/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                        Eliminar mascota</a></td>
+            </tr>
+            {{/each}}
+        </table>
+
+    </div>
+</div>
